@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Events - EventEase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/guard.js"></script>
+</head>
+<body id="page-manage-events">
+
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a class="logo" href="organizer-dashboard.html">Event<span>Ease</span></a>
+      <button class="menu-button" id="menuButton">☰ Menu</button>
+      <nav class="nav-links" id="navLinks">
+          <a href="organizer-dashboard.html">Dashboard</a>
+          <a href="create-event.html">Create Event</a>
+          <a href="manage-events.html" class="active">Manage Events</a>
+          <a href="attendee-list.html">Attendees</a>
+          <a href="reports.html">Reports</a>
+          <a href="settings.html">Settings</a>
+          <a href="index.html" id="logoutLink">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>Manage Events</h1>
+      <p class="muted">View, edit, or delete the events you created.</p>
+    </div>
+    <div id="manageMessage" class="message hidden"></div>
+
+    <div class="card">
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>Event</th><th>Date</th><th>Status</th><th>Registered</th><th>Actions</th></tr></thead>
+          <tbody id="manageTable"></tbody>
+        </table>
+      </div>
+      <div class="button-row">
+        <a class="btn btn-primary btn-small" href="create-event.html">+ Create Event</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 EventEase · Midterm demo project · All events and people shown are sample data.</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/organizer.js"></script>
+</body>
+</html>

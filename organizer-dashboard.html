@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organizer Dashboard - EventEase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/guard.js"></script>
+</head>
+<body id="page-organizer-dashboard">
+
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a class="logo" href="organizer-dashboard.html">Event<span>Ease</span></a>
+      <button class="menu-button" id="menuButton">☰ Menu</button>
+      <nav class="nav-links" id="navLinks">
+          <a href="organizer-dashboard.html" class="active">Dashboard</a>
+          <a href="create-event.html">Create Event</a>
+          <a href="manage-events.html">Manage Events</a>
+          <a href="attendee-list.html">Attendees</a>
+          <a href="reports.html">Reports</a>
+          <a href="settings.html">Settings</a>
+          <a href="index.html" id="logoutLink">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>Organizer Dashboard</h1>
+      <p class="muted">Overview of the events you manage.</p>
+    </div>
+
+    <div class="stats-grid">
+      <div class="card stat-card"><h3>Total events</h3><div class="stat-number" id="totalEvents">0</div></div>
+      <div class="card stat-card"><h3>Total registrations</h3><div class="stat-number" id="totalRegistrations">0</div></div>
+      <div class="card stat-card"><h3>Upcoming events</h3><div class="stat-number" id="upcomingEvents">0</div></div>
+      <div class="card stat-card"><h3>Completed events</h3><div class="stat-number" id="completedEvents">0</div></div>
+    </div>
+
+    <div class="two-columns">
+      <div class="card">
+        <h2>Upcoming events</h2>
+        <div class="table-wrapper">
+          <table>
+            <thead><tr><th>Event</th><th>Date</th><th>Registered</th><th>Action</th></tr></thead>
+            <tbody id="upcomingTable"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Management actions</h2>
+        <div class="button-row" style="flex-direction: column;">
+          <a class="btn btn-primary btn-small" href="create-event.html">Create Event</a>
+          <a class="btn btn-outline btn-small" href="manage-events.html">Manage Events</a>
+          <a class="btn btn-outline btn-small" href="attendee-list.html">Attendee List</a>
+          <a class="btn btn-outline btn-small" href="reports.html">Reports</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 EventEase · Midterm demo project · All events and people shown are sample data.</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/organizer.js"></script>
+</body>
+</html>
