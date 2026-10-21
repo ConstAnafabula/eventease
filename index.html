@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - EventEase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/guard.js"></script>
+</head>
+<body id="page-home">
+
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a class="logo" href="index.html">Event<span>Ease</span></a>
+      <button class="menu-button" id="menuButton">☰ Menu</button>
+      <nav class="nav-links" id="navLinks">
+          <a href="index.html" class="active">Home</a>
+          <a href="login.html">Login</a>
+          <a href="register.html">Register</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Everything happening. One place.</h1>
+      <p>EventEase helps students discover campus events, register in seconds, and keep track of everything they signed up for. Organizers can create events and manage attendees too.</p>
+      <div class="button-row">
+        <a class="btn btn-primary" href="login.html">Login</a>
+        <a class="btn btn-outline" href="register.html">Register</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <section class="section">
+      <h2>How EventEase works</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>1. Discover</h3>
+          <p class="muted">Search and filter campus events by title or category.</p>
+        </div>
+        <div class="card">
+          <h3>2. Register</h3>
+          <p class="muted">Sign up for an event with a short form and get a confirmation.</p>
+        </div>
+        <div class="card">
+          <h3>3. Organize</h3>
+          <p class="muted">Organizers create events, watch registrations, and view simple reports.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Featured upcoming events</h2>
+      <div class="grid" id="featuredEvents"></div>
+      <div class="button-row">
+        <a class="btn btn-outline" href="login.html">Login to browse all events</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 EventEase · Midterm demo project · All events and people shown are sample data.</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

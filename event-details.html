@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Details - EventEase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/guard.js"></script>
+</head>
+<body id="page-event-details">
+
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a class="logo" href="dashboard.html">Event<span>Ease</span></a>
+      <button class="menu-button" id="menuButton">☰ Menu</button>
+      <nav class="nav-links" id="navLinks">
+          <a href="dashboard.html">Dashboard</a>
+          <a href="events.html" class="active">Events</a>
+          <a href="my-registrations.html">My Registrations</a>
+          <a href="calendar.html">Calendar</a>
+          <a href="favorites.html">Favorites</a>
+          <a href="notifications.html">🔔 Notifications</a>
+          <a href="profile.html">Profile</a>
+          <a href="index.html" id="logoutLink">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <a href="events.html">← Back to events</a>
+    </div>
+
+    <div id="eventNotFound" class="card hidden">
+      <h2>Event not found</h2>
+      <p class="muted">This event does not exist or was removed.</p>
+      <a class="btn btn-primary btn-small" href="events.html">Browse Events</a>
+    </div>
+
+    <div id="eventDetails">
+      <div class="event-banner event-banner-large">
+        <span id="eventSymbol"></span>
+        <img id="eventImage" src="" alt="">
+      </div>
+      <div class="two-columns">
+        <div>
+          <span class="badge" id="eventCategory"></span>
+          <h1 id="eventTitle"></h1>
+          <p id="eventDescription"></p>
+          <div class="button-row">
+            <a class="btn btn-primary" id="registerButton" href="events.html">Register for this event</a>
+            <button class="btn btn-outline" id="favoriteButton">☆ Save to Favorites</button>
+          </div>
+          <p class="muted" id="closedNote" style="margin-top: 12px;"></p>
+        </div>
+        <div class="card">
+          <h3>Event information</h3>
+          <div class="info-row"><span>Organizer</span><span id="eventOrganizer"></span></div>
+          <div class="info-row"><span>Date</span><span id="eventDate"></span></div>
+          <div class="info-row"><span>Time</span><span id="eventTime"></span></div>
+          <div class="info-row"><span>Venue</span><span id="eventVenue"></span></div>
+          <div class="info-row"><span>Availability</span><span id="eventSlots"></span></div>
+          <div class="info-row"><span>Your status</span><span id="eventStatus"></span></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 EventEase · Midterm demo project · All events and people shown are sample data.</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/events.js"></script>
+</body>
+</html>

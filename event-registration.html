@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Registration - EventEase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/guard.js"></script>
+</head>
+<body id="page-event-registration">
+
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a class="logo" href="dashboard.html">Event<span>Ease</span></a>
+      <button class="menu-button" id="menuButton">☰ Menu</button>
+      <nav class="nav-links" id="navLinks">
+          <a href="dashboard.html">Dashboard</a>
+          <a href="events.html" class="active">Events</a>
+          <a href="my-registrations.html">My Registrations</a>
+          <a href="calendar.html">Calendar</a>
+          <a href="favorites.html">Favorites</a>
+          <a href="notifications.html">🔔 Notifications</a>
+          <a href="profile.html">Profile</a>
+          <a href="index.html" id="logoutLink">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>Event Registration</h1>
+    </div>
+
+    <div id="eventNotFound" class="card hidden">
+      <h2>Event not found</h2>
+      <p class="muted">Please choose an event first.</p>
+      <a class="btn btn-primary btn-small" href="events.html">Browse Events</a>
+    </div>
+
+    <div id="registrationContent">
+      <div class="card form-box" style="margin-bottom: 20px;">
+        <h2 id="eventTitle"></h2>
+        <p class="muted" id="eventInfo"></p>
+        <p class="status-open" id="eventSlots"></p>
+      </div>
+
+      <div class="card form-box">
+    <div id="registrationMessage" class="message hidden"></div>
+
+        <form id="registrationForm">
+          <div class="form-group">
+            <label for="attendeeName">Full name *</label>
+            <input type="text" id="attendeeName">
+          </div>
+          <div class="form-group">
+            <label for="attendeeEmail">Email *</label>
+            <input type="email" id="attendeeEmail">
+          </div>
+          <div class="form-group">
+            <label for="studentId">Student ID *</label>
+            <input type="text" id="studentId" placeholder="Example: 2024-00123">
+          </div>
+          <div class="form-group">
+            <label for="yearLevel">Year level *</label>
+            <select id="yearLevel">
+              <option value="">Select your year level</option>
+              <option value="1st Year">1st Year</option>
+              <option value="2nd Year">2nd Year</option>
+              <option value="3rd Year">3rd Year</option>
+              <option value="4th Year">4th Year</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="reason">Why do you want to join? (optional)</label>
+            <textarea id="reason"></textarea>
+          </div>
+          <div class="checkbox-row">
+            <input type="checkbox" id="agreeBox">
+            <label for="agreeBox">I confirm that my information is correct.</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Confirm Registration</button>
+          <a class="btn btn-outline" href="events.html">Cancel</a>
+        </form>
+
+        <div id="confirmationBox" class="hidden">
+          <div class="message success">Registration confirmed!</div>
+          <p>You are registered for <strong id="confirmationEvent"></strong>.</p>
+          <p>Your registration number is <strong id="confirmationId"></strong>.</p>
+          <div class="button-row">
+            <a class="btn btn-primary" href="my-registrations.html">Go to My Registrations</a>
+            <a class="btn btn-outline" id="confirmationLink" href="my-registrations.html">View Registration Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 EventEase · Midterm demo project · All events and people shown are sample data.</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/registrations.js"></script>
+</body>
+</html>

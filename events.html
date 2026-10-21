@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse Events - EventEase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/guard.js"></script>
+</head>
+<body id="page-events">
+
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a class="logo" href="dashboard.html">Event<span>Ease</span></a>
+      <button class="menu-button" id="menuButton">☰ Menu</button>
+      <nav class="nav-links" id="navLinks">
+          <a href="dashboard.html">Dashboard</a>
+          <a href="events.html" class="active">Events</a>
+          <a href="my-registrations.html">My Registrations</a>
+          <a href="calendar.html">Calendar</a>
+          <a href="favorites.html">Favorites</a>
+          <a href="notifications.html">🔔 Notifications</a>
+          <a href="profile.html">Profile</a>
+          <a href="index.html" id="logoutLink">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>Browse Events</h1>
+      <p class="muted">Find something fun happening on campus.</p>
+    </div>
+
+    <div class="filter-row">
+      <input type="text" id="searchInput" placeholder="Search events by title...">
+      <select id="categorySelect">
+        <option value="All">All categories</option>
+        <option value="Technology">Technology</option><option value="Workshop">Workshop</option><option value="Career">Career</option><option value="Leadership">Leadership</option><option value="Sports">Sports</option><option value="Arts & Music">Arts & Music</option>
+      </select>
+    </div>
+    <p class="muted" id="resultCount"></p>
+    <div class="grid" id="eventGrid"></div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 EventEase · Midterm demo project · All events and people shown are sample data.</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/events.js"></script>
+</body>
+</html>
