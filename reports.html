@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reports - EventEase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/guard.js"></script>
+</head>
+<body id="page-reports">
+
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a class="logo" href="organizer-dashboard.html">Event<span>Ease</span></a>
+      <button class="menu-button" id="menuButton">☰ Menu</button>
+      <nav class="nav-links" id="navLinks">
+          <a href="organizer-dashboard.html">Dashboard</a>
+          <a href="create-event.html">Create Event</a>
+          <a href="manage-events.html">Manage Events</a>
+          <a href="attendee-list.html">Attendees</a>
+          <a href="reports.html" class="active">Reports</a>
+          <a href="settings.html">Settings</a>
+          <a href="index.html" id="logoutLink">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>Reports</h1>
+      <p class="muted">Simple statistics for your events.</p>
+    </div>
+
+    <div class="stats-grid">
+      <div class="card stat-card"><h3>Total events</h3><div class="stat-number" id="reportEvents">0</div></div>
+      <div class="card stat-card"><h3>Total registrations</h3><div class="stat-number" id="reportRegistrations">0</div></div>
+      <div class="card stat-card"><h3>Average fill rate</h3><div class="stat-number" id="reportFill">0%</div></div>
+      <div class="card stat-card"><h3>Attendance rate</h3><div class="stat-number" id="reportAttendance">0%</div></div>
+    </div>
+
+    <div class="two-columns" style="grid-template-columns: 1fr 1fr;">
+      <div class="card">
+        <h2>Registrations vs. capacity</h2>
+        <div id="fillBars"></div>
+      </div>
+      <div class="card">
+        <h2>Attendance (completed events)</h2>
+        <div id="attendanceBars"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 EventEase · Midterm demo project · All events and people shown are sample data.</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/organizer.js"></script>
+</body>
+</html>

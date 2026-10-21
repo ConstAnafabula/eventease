@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile - EventEase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/guard.js"></script>
+</head>
+<body id="page-profile">
+
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a class="logo" href="dashboard.html">Event<span>Ease</span></a>
+      <button class="menu-button" id="menuButton">☰ Menu</button>
+      <nav class="nav-links" id="navLinks">
+          <a href="dashboard.html">Dashboard</a>
+          <a href="events.html">Events</a>
+          <a href="my-registrations.html">My Registrations</a>
+          <a href="calendar.html">Calendar</a>
+          <a href="favorites.html">Favorites</a>
+          <a href="notifications.html">🔔 Notifications</a>
+          <a href="profile.html" class="active">Profile</a>
+          <a href="index.html" id="logoutLink">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>My Profile</h1>
+    </div>
+
+    <div class="two-columns">
+      <div class="card">
+        <h3>Account information</h3>
+        <div class="info-row"><span>Name</span><span id="profileName"></span></div>
+        <div class="info-row"><span>Email</span><span id="profileEmail"></span></div>
+        <div class="info-row"><span>Program</span><span id="profileProgram"></span></div>
+        <div class="info-row"><span>Account type</span><span id="profileType"></span></div>
+        <div class="button-row">
+          <a class="btn btn-primary btn-small" href="edit-profile.html">Edit Profile</a>
+          <a class="btn btn-outline btn-small" href="settings.html">Settings</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>My activity</h3>
+        <div class="info-row"><span>Active registrations</span><span id="statRegistrations">0</span></div>
+        <div class="info-row"><span>Cancelled registrations</span><span id="statCancelled">0</span></div>
+        <div class="info-row"><span>Favorite events</span><span id="statFavorites">0</span></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 EventEase · Midterm demo project · All events and people shown are sample data.</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/account.js"></script>
+</body>
+</html>

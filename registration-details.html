@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Details - EventEase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/guard.js"></script>
+</head>
+<body id="page-registration-details">
+
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a class="logo" href="dashboard.html">Event<span>Ease</span></a>
+      <button class="menu-button" id="menuButton">☰ Menu</button>
+      <nav class="nav-links" id="navLinks">
+          <a href="dashboard.html">Dashboard</a>
+          <a href="events.html">Events</a>
+          <a href="my-registrations.html" class="active">My Registrations</a>
+          <a href="calendar.html">Calendar</a>
+          <a href="favorites.html">Favorites</a>
+          <a href="notifications.html">🔔 Notifications</a>
+          <a href="profile.html">Profile</a>
+          <a href="index.html" id="logoutLink">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <a href="my-registrations.html">← Back to my registrations</a>
+      <h1>Registration Details</h1>
+    </div>
+    <div id="detailMessage" class="message hidden"></div>
+
+    <div id="registrationNotFound" class="card hidden">
+      <h2>Registration not found</h2>
+      <a class="btn btn-primary btn-small" href="my-registrations.html">Go to My Registrations</a>
+    </div>
+
+    <div id="registrationDetails" class="two-columns">
+      <div class="card">
+        <h3>Registration</h3>
+        <div class="info-row"><span>Registration number</span><span id="detailId"></span></div>
+        <div class="info-row"><span>Status</span><span id="detailStatus"></span></div>
+        <div class="info-row"><span>Registered on</span><span id="detailRegisteredOn"></span></div>
+        <div class="info-row"><span>Name</span><span id="detailName"></span></div>
+        <div class="info-row"><span>Email</span><span id="detailEmail"></span></div>
+        <div class="info-row"><span>Student ID</span><span id="detailStudentId"></span></div>
+        <div class="info-row"><span>Year level</span><span id="detailYear"></span></div>
+      </div>
+      <div class="card">
+        <h3>Event</h3>
+        <div class="info-row"><span>Title</span><span id="detailEventTitle"></span></div>
+        <div class="info-row"><span>When</span><span id="detailEventDate"></span></div>
+        <div class="info-row"><span>Venue</span><span id="detailEventVenue"></span></div>
+        <div class="button-row">
+          <a class="btn btn-outline btn-small" id="detailEventLink" href="events.html">View Event</a>
+          <button class="btn btn-danger btn-small hidden" id="cancelButton">Cancel Registration</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 EventEase · Midterm demo project · All events and people shown are sample data.</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/registrations.js"></script>
+</body>
+</html>

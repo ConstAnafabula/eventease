@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings - EventEase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/guard.js"></script>
+</head>
+<body id="page-settings">
+
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a class="logo" href="dashboard.html">Event<span>Ease</span></a>
+      <button class="menu-button" id="menuButton">☰ Menu</button>
+      <nav class="nav-links" id="navLinks">
+          <a href="dashboard.html">Dashboard</a>
+          <a href="events.html">Events</a>
+          <a href="my-registrations.html">My Registrations</a>
+          <a href="calendar.html">Calendar</a>
+          <a href="favorites.html">Favorites</a>
+          <a href="notifications.html">🔔 Notifications</a>
+          <a href="profile.html">Profile</a>
+          <a href="index.html" id="logoutLink">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>Settings</h1>
+      <p class="muted">Choose how EventEase works for you.</p>
+    </div>
+
+    <div class="card form-box">
+    <div id="settingsMessage" class="message hidden"></div>
+
+      <form id="settingsForm">
+        <h3>Notification preferences</h3>
+        <div class="checkbox-row">
+          <input type="checkbox" id="emailRegistration">
+          <label for="emailRegistration">Registration confirmations</label>
+        </div>
+        <div class="checkbox-row">
+          <input type="checkbox" id="emailReminders">
+          <label for="emailReminders">Upcoming event reminders</label>
+        </div>
+        <div class="checkbox-row">
+          <input type="checkbox" id="emailUpdates">
+          <label for="emailUpdates">Event updates and changes</label>
+        </div>
+        <div class="form-group">
+          <label for="reminderTiming">Send reminders</label>
+          <select id="reminderTiming">
+            <option value="1 day before">1 day before</option>
+            <option value="3 days before">3 days before</option>
+            <option value="1 week before">1 week before</option>
+          </select>
+        </div>
+
+        <h3 style="margin-top: 24px;">Account preferences</h3>
+        <div class="form-group">
+          <label for="defaultCategory">Default category on Browse Events</label>
+          <select id="defaultCategory">
+            <option value="All">All categories</option>
+            <option value="Technology">Technology</option><option value="Workshop">Workshop</option><option value="Career">Career</option><option value="Leadership">Leadership</option><option value="Sports">Sports</option><option value="Arts & Music">Arts & Music</option>
+          </select>
+        </div>
+        <div class="checkbox-row">
+          <input type="checkbox" id="showName">
+          <label for="showName">Show my name in attendee lists</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save Settings</button>
+      </form>
+      <hr style="margin: 28px 0;">
+      <h3>Reset demo data</h3>
+      <p class="muted">Erases registrations, favorites, created events, and settings so you can start the demo fresh.</p>
+      <button class="btn btn-danger btn-small" id="resetButton">Reset Demo Data</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 EventEase · Midterm demo project · All events and people shown are sample data.</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/account.js"></script>
+</body>
+</html>
