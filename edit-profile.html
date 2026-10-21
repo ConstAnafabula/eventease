@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Profile - EventEase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/guard.js"></script>
+</head>
+<body id="page-edit-profile">
+
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a class="logo" href="dashboard.html">Event<span>Ease</span></a>
+      <button class="menu-button" id="menuButton">☰ Menu</button>
+      <nav class="nav-links" id="navLinks">
+          <a href="dashboard.html">Dashboard</a>
+          <a href="events.html">Events</a>
+          <a href="my-registrations.html">My Registrations</a>
+          <a href="calendar.html">Calendar</a>
+          <a href="favorites.html">Favorites</a>
+          <a href="notifications.html">🔔 Notifications</a>
+          <a href="profile.html" class="active">Profile</a>
+          <a href="index.html" id="logoutLink">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>Edit Profile</h1>
+    </div>
+
+    <div class="card form-box">
+    <div id="editMessage" class="message hidden"></div>
+
+      <form id="editProfileForm">
+        <div class="form-group">
+          <label for="editName">Full name</label>
+          <input type="text" id="editName">
+        </div>
+        <div class="form-group">
+          <label for="editEmail">Email</label>
+          <input type="email" id="editEmail">
+        </div>
+        <div class="form-group">
+          <label for="editProgram">Program or organization</label>
+          <input type="text" id="editProgram" placeholder="Example: BS Information Technology">
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+        <a class="btn btn-outline" href="profile.html">Cancel</a>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 EventEase · Midterm demo project · All events and people shown are sample data.</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/account.js"></script>
+</body>
+</html>

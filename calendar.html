@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Calendar - EventEase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/guard.js"></script>
+</head>
+<body id="page-calendar">
+
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a class="logo" href="dashboard.html">Event<span>Ease</span></a>
+      <button class="menu-button" id="menuButton">☰ Menu</button>
+      <nav class="nav-links" id="navLinks">
+          <a href="dashboard.html">Dashboard</a>
+          <a href="events.html">Events</a>
+          <a href="my-registrations.html">My Registrations</a>
+          <a href="calendar.html" class="active">Calendar</a>
+          <a href="favorites.html">Favorites</a>
+          <a href="notifications.html">🔔 Notifications</a>
+          <a href="profile.html">Profile</a>
+          <a href="index.html" id="logoutLink">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>Event Calendar</h1>
+      <p class="muted">Click an event to see its details.</p>
+    </div>
+
+    <div class="calendar-header">
+      <button class="btn btn-outline btn-small" id="previousMonth">← Previous</button>
+      <h2 id="monthTitle" style="margin-bottom: 0;"></h2>
+      <button class="btn btn-outline btn-small" id="nextMonth">Next →</button>
+    </div>
+    <div class="calendar-grid" id="calendarGrid"></div>
+
+    <div class="card">
+      <h2>Events this month</h2>
+      <ul class="list-plain" id="monthEventList"></ul>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 EventEase · Midterm demo project · All events and people shown are sample data.</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/events.js"></script>
+</body>
+</html>

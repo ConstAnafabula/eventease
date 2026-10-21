@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - EventEase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/guard.js"></script>
+</head>
+<body id="page-dashboard">
+
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a class="logo" href="dashboard.html">Event<span>Ease</span></a>
+      <button class="menu-button" id="menuButton">☰ Menu</button>
+      <nav class="nav-links" id="navLinks">
+          <a href="dashboard.html" class="active">Dashboard</a>
+          <a href="events.html">Events</a>
+          <a href="my-registrations.html">My Registrations</a>
+          <a href="calendar.html">Calendar</a>
+          <a href="favorites.html">Favorites</a>
+          <a href="notifications.html">🔔 Notifications</a>
+          <a href="profile.html">Profile</a>
+          <a href="index.html" id="logoutLink">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>Welcome back, <span id="welcomeName"></span>!</h1>
+      <p class="muted">Here is what is happening with your events.</p>
+    </div>
+
+    <div class="stats-grid">
+      <div class="card stat-card">
+        <h3>Upcoming events</h3>
+        <div class="stat-number" id="upcomingCount">0</div>
+      </div>
+      <div class="card stat-card">
+        <h3>My registrations</h3>
+        <div class="stat-number" id="registrationCount">0</div>
+      </div>
+      <div class="card stat-card">
+        <h3>Favorite events</h3>
+        <div class="stat-number" id="favoriteCount">0</div>
+      </div>
+    </div>
+
+    <section class="section" style="padding-top: 0;">
+      <h2>Featured events</h2>
+      <div class="grid" id="featuredEvents"></div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+      <div class="two-columns">
+        <div class="card">
+          <h2>Recent activity</h2>
+          <ul class="list-plain" id="activityList"></ul>
+        </div>
+        <div class="card">
+          <h2>Quick links</h2>
+          <div class="button-row" style="flex-direction: column;">
+            <a class="btn btn-primary btn-small" href="events.html">Browse Events</a>
+            <a class="btn btn-outline btn-small" href="my-registrations.html">My Registrations</a>
+            <a class="btn btn-outline btn-small" href="calendar.html">Event Calendar</a>
+            <a class="btn btn-outline btn-small" href="favorites.html">Favorites</a>
+            <a class="btn btn-outline btn-small" href="settings.html">Settings</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 EventEase · Midterm demo project · All events and people shown are sample data.</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

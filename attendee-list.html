@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendee List - EventEase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/guard.js"></script>
+</head>
+<body id="page-attendee-list">
+
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a class="logo" href="organizer-dashboard.html">Event<span>Ease</span></a>
+      <button class="menu-button" id="menuButton">☰ Menu</button>
+      <nav class="nav-links" id="navLinks">
+          <a href="organizer-dashboard.html">Dashboard</a>
+          <a href="create-event.html">Create Event</a>
+          <a href="manage-events.html">Manage Events</a>
+          <a href="attendee-list.html" class="active">Attendees</a>
+          <a href="reports.html">Reports</a>
+          <a href="settings.html">Settings</a>
+          <a href="index.html" id="logoutLink">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>Attendee List</h1>
+      <p class="muted">See who registered for an event.</p>
+    </div>
+
+    <div class="filter-row">
+      <select id="eventSelect"></select>
+      <input type="text" id="attendeeSearch" placeholder="Search by name or email...">
+    </div>
+    <p class="muted" id="attendeeSummary"></p>
+    <div class="card">
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>Name</th><th>Email</th><th>Status</th></tr></thead>
+          <tbody id="attendeeTable"></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 EventEase · Midterm demo project · All events and people shown are sample data.</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/organizer.js"></script>
+</body>
+</html>
